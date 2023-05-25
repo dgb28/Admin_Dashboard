@@ -143,7 +143,7 @@ const MyProSidebar = () => {
                   width="100px"
                   height="100px"
                   src={logo}
-                  style={{ cursor: "pointer", borderRadius: "50%" }}
+                  style={{ cursor: "pointer", borderRadius: "50%" }} 
                 />
               </Box>
               <Box textAlign="center">
