@@ -271,6 +271,7 @@ const MyProSidebar = () => {
           </Box>
         </Menu>
       </Sidebar>
+      
     </Box>
   );
 };
