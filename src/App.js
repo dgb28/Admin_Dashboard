@@ -29,7 +29,7 @@ function App() {
         <div className="app">
           <main className="content">
             <Topbar/>
-            <Routes basename="/admin_dashboard">
+            <Routes>
               <Route path="/admin_dashboard/" element={<Dashboard/>}/>
               <Route path="/" element={<Dashboard/>}/>
               <Route path="/team" element={<Team/>}/>
