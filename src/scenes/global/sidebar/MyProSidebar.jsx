@@ -3,7 +3,7 @@ import { Menu, Sidebar, MenuItem } from "react-pro-sidebar";
 import { useProSidebar } from "react-pro-sidebar";
 
 import { useSidebarContext } from "./sidebarContext";
-
+import logo from "../../user.png"
 import { Link } from "react-router-dom";
 import { tokens } from "../../../theme";
 import { useTheme, Box, Typography, IconButton } from "@mui/material";
@@ -142,7 +142,7 @@ const MyProSidebar = () => {
                   alt="profile user"
                   width="100px"
                   height="100px"
-                  src={"../../assets/user.png"}
+                  src={logo}
                   style={{ cursor: "pointer", borderRadius: "50%" }}
                 />
               </Box>
@@ -159,7 +159,7 @@ const MyProSidebar = () => {
             </Box>
           )}
           <Box paddingLeft={collapsed ? undefined : "10%"}>
-            <Link to="/" style={{textDecoration: 'none'}}>
+            <Link to="/admin_dashboard/" style={{textDecoration: 'none'}}>
             <Item
               title="Dashboard"
               icon={<HomeOutlinedIcon />}
