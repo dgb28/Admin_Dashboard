@@ -23,6 +23,7 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import MapOutlinedIcon from "@mui/icons-material/MapOutlined";
 import SwitchRightOutlinedIcon from "@mui/icons-material/SwitchRightOutlined";
 import SwitchLeftOutlinedIcon from "@mui/icons-material/SwitchLeftOutlined";
+// import { FormatUnderlined } from "@mui/icons-material";
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
@@ -33,7 +34,6 @@ const Item = ({ title, to, icon, selected, setSelected }) => {
       style={{ color: colors.grey[100] }}
       onClick={() => setSelected(title)}
       icon={icon}
-      routerLink={<Link to={to} />}
     >
       <Typography>{title}</Typography>
     </MenuItem>
@@ -159,14 +159,14 @@ const MyProSidebar = () => {
             </Box>
           )}
           <Box paddingLeft={collapsed ? undefined : "10%"}>
+            <Link to="/" style={{textDecoration: 'none'}}>
             <Item
               title="Dashboard"
-              to="/"
               icon={<HomeOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
             />
-
+            </Link>
             <Typography
               variant="h6"
               color={colors.grey[300]}
@@ -174,27 +174,32 @@ const MyProSidebar = () => {
             >
               Data
             </Typography>
+
+            <Link to="/team" style={{textDecoration:'none'}}>
             <Item
               title="Manage Team"
-              to="/team"
               icon={<PeopleOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
+              />
+            </Link>
+
+            <Link to="/contacts" style={{textDecoration: 'none'}}>
             <Item
               title="Contacts Information"
-              to="/contacts"
               icon={<ContactsOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
+              />
+            </Link>
+
+            <Link to="/invoices" style={{textDecoration: 'none'}}>
             <Item
               title="Invoices Balances"
-              to="/invoices"
               icon={<ReceiptOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
+            /></Link>
 
             <Typography
               variant="h6"
@@ -203,27 +208,30 @@ const MyProSidebar = () => {
             >
               Pages
             </Typography>
+
+            <Link to="/form" style={{textDecoration: 'none'}}>
             <Item
               title="Profile Form"
-              to="/form"
               icon={<PersonOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
+            /></Link>
+
+            <Link to="/calendar" style={{textDecoration: 'none'}}>
             <Item
               title="Calendar"
-              to="/calendar"
               icon={<CalendarTodayOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
+            /></Link>
+
+            <Link to="/faq" style={{textDecoration: 'none'}}>
             <Item
               title="FAQ Page"
-              to="/faq"
               icon={<HelpOutlineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
+            /></Link>
 
             <Typography
               variant="h6"
@@ -232,34 +240,34 @@ const MyProSidebar = () => {
             >
               Charts
             </Typography>
+            <Link to="/bar" style={{textDecoration: 'none'}}>
             <Item
               title="Bar Chart"
-              to="/bar"
               icon={<BarChartOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
+            /></Link>
+            <Link to="/pie" style={{textDecoration: 'none'}}>
             <Item
               title="Pie Chart"
-              to="/pie"
               icon={<PieChartOutlineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
+            /></Link>
+            <Link to="/line" style={{textDecoration: 'none'}}>
             <Item
               title="Line Chart"
-              to="/line"
               icon={<TimelineOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
+            /></Link>
+            <Link to="/geography" style={{textDecoration: 'none'}}>
             <Item
               title="Geography Chart"
-              to="/geography"
               icon={<MapOutlinedIcon />}
               selected={selected}
               setSelected={setSelected}
-            />
+            /></Link>
           </Box>
         </Menu>
       </Sidebar>
