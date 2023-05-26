@@ -155,6 +155,13 @@ const MyProSidebar = () => {
                 >
                   Dhruv Bhanderi
                 </Typography>
+                <Typography
+                  variant="h6"
+                  color={colors.greenAccent[500]}
+                  sx={{ m: "10px 0 0 0" }}
+                >
+                  MERN Stack Developer
+                </Typography>
               </Box>
             </Box>
           )}
